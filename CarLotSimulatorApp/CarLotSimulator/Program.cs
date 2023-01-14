@@ -29,12 +29,14 @@ namespace CarLotSimulator
             ford.HonkNoise = "move!!!";
             ford.IsDriveable = true;
             lot.Cars.Add(ford);
+            
             //dodge.Year = 2022;
             //dodge.Make = "dodge";
             //dodge.Model = "dodge";
             //dodge.EngineNoise = "pop pop";
             //dodge.HonkNoise = "to much ram, not enough dodge";
             //dodge.IsDriveable = true;
+            
             var dodge = new Car()
             {
                 Year = 2022,
@@ -43,11 +45,14 @@ namespace CarLotSimulator
                 EngineNoise = "pop pop",
                 HonkNoise = "to much ram not enough dodge!!",
                 IsDriveable = true
+                
             };
             lot.Cars.Add(dodge);
             var chevy = new Car(2022, "chevy", "1500 silverado", "girl truckkkkkk", "gaaaaaayyyy", false);
             lot.Cars.Add(chevy);
+           
             //Call each of the methods for each car
+            
             Console.WriteLine("Ford");
             ford.MakeEngineNoise(ford.EngineNoise); ford.MakeHonkNoise(ford.HonkNoise);
             Console.WriteLine("Dodge");
@@ -55,10 +60,14 @@ namespace CarLotSimulator
             Console.WriteLine("Chevy");
             chevy.MakeEngineNoise(chevy.EngineNoise); chevy.MakeHonkNoise(chevy.HonkNoise);
 
+            
+
             foreach(var car in lot.Cars)
             {
-                Console.WriteLine($"Year: {car.Year} Make: {car.Make} Model: {car.Model} ");
+                Console.WriteLine($"Year: {car.Year} Make: {car.Make} Model: {car.Model}");
             }
+
+            Console.WriteLine($"Number of cars created {CarLot.numberOfCars}");
 
             //*************BONUS*************//
 
